@@ -1,5 +1,7 @@
 import { getImages } from '../db/queries/select';
 
+export const dynamic = 'force-dynamic';
+
 export default async function Home() {
   const images = await getImages();
 
