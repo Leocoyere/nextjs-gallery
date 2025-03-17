@@ -3,6 +3,12 @@ import { getImages } from '../db/queries/select';
 export default async function Home() {
   const images = await getImages();
 
+  if (!images) {
+    return {
+      notFound: true,
+    }
+  }
+
   return (
     <div className="flex flex-wrap gap-4">
       {[...images, ...images, ...images].map((image, index) => (
