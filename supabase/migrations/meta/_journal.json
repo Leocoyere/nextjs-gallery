@@ -8,6 +8,13 @@
       "when": 1742208769957,
       "tag": "0000_brown_bucky",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1742375763236,
+      "tag": "0001_busy_loki",
+      "breakpoints": true
     }
   ]
 }
