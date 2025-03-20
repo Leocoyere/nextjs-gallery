@@ -7,12 +7,12 @@ import {
   SignedOut,
   UserButton,
 } from '@clerk/nextjs'
-import { TopNav } from "./_components/topnav";
+import { TopNav } from "@/app/_components/topnav";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import "@uploadthing/react/styles.css";
 import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
-import { ourFileRouter } from "./api/uploadthing/core";
+import { ourFileRouter } from "@/app/api/uploadthing/core";
 import { extractRouterConfig } from "uploadthing/server";
 
 const geistSans = Geist({
