@@ -10,8 +10,8 @@ export function TopNav() {
     const router = useRouter();
     
     return (
-        <nav className="flex justify-between items-center p-4 font-semibold">
-            <h1>Gallery</h1>
+        <nav className="flex justify-between items-center p-4 font-semibold border-b border-gray-200">
+            <h1 className="text-2xl">Gallery</h1>
 
             <div className="flex flex-row">
                 <SignedIn>
