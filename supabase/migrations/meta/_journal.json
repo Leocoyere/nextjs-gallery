@@ -15,6 +15,13 @@
       "when": 1742375763236,
       "tag": "0001_busy_loki",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1742462785394,
+      "tag": "0002_breezy_black_cat",
+      "breakpoints": true
     }
   ]
 }

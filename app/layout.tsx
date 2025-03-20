@@ -10,6 +10,10 @@ import {
 import { TopNav } from "./_components/topnav";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import "@uploadthing/react/styles.css";
+import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
+import { ourFileRouter } from "./api/uploadthing/core";
+import { extractRouterConfig } from "uploadthing/server";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,6 +38,9 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
+        <NextSSRPlugin
+          routerConfig={extractRouterConfig(ourFileRouter)}
+        />
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col gap-4`}
       >

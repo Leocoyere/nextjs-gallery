@@ -1,0 +1,1 @@
+ALTER TABLE "nextjs-gallery_image" ADD COLUMN "user_id" varchar(256) NOT NULL;
