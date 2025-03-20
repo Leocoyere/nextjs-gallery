@@ -7,7 +7,7 @@ async function Images() {
 	const images = await getImages();
 
 	return (
-		<div className="flex flex-wrap gap-4">
+		<div className="flex flex-wrap gap-4 px-4">
 			{images.map((image) => (
 				<div key={image.id} className="w-48 flex flex-col">
 					<img src={image.url} alt={`image-${image.id}`} />
