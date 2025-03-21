@@ -3,13 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
     "@clerk/nextjs": "^6.12.5",
+    "@sentry/nextjs": "^9",
     "@uploadthing/react": "^7.3.0",
     "dotenv": "^16.4.7",
     "drizzle-orm": "^0.40.0",
