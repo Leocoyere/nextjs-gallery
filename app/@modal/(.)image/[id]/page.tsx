@@ -1,4 +1,6 @@
 import { getImageById } from "@/db/queries/select";
+import { Modal } from "./modal";
+import FullPageImageView from "@/components/full-image-page";
 
 export default async function ImageModal({
     params
@@ -16,8 +18,8 @@ export default async function ImageModal({
     const image = await getImageById(idAsNumber);
 
     return (
-        <div>
-            <img src={image.url} alt={image.name} />
-        </div>
+        <Modal>
+            <FullPageImageView id={idAsNumber} />
+        </Modal>
     )
 }
