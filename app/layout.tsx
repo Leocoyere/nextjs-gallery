@@ -39,7 +39,7 @@ export default function RootLayout({
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="h-screen grid grid-rows-[auto,1fr]">
+        <div className="h-screen grid grid-rows-[auto_1fr]">
           <TopNav />
           <main className="overflow-y-scroll">
             {children}
