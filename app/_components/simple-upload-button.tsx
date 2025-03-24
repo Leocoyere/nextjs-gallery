@@ -1,6 +1,6 @@
 "use client";
 
-import { UploadButton, useUploadThing } from "@/utils/uploadthing";
+import { useUploadThing } from "@/utils/uploadthing";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 
@@ -39,11 +39,22 @@ function UploadSVG() {
   
 }
 
+function LoadingSpinnerSVG() {
+  return (
+    <svg width="24" height="24" stroke="#fff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g className="spinner_V8m1"><circle cx="12" cy="12" r="9.5" fill="none" stroke-width="3"></circle></g></svg>
+  )
+}
+
 function SimpleUploadButton() {
   const router = useRouter();
+
   const { inputProps } = useUploadThingInputProps("imageUploader", {
     onUploadBegin() {
-      toast("Uploading...", {
+      toast(
+        <div className="flex items-center gap-2 text-white">
+          <LoadingSpinnerSVG /> 
+          <span className="text-lg">Uploading...</span>
+        </div>, {
         id: "upload-begin"
       });
     },
