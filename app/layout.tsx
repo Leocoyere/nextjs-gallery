@@ -7,6 +7,7 @@ import "@uploadthing/react/styles.css";
 import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
 import { ourFileRouter } from "@/app/api/uploadthing/core";
 import { extractRouterConfig } from "uploadthing/server";
+import { Toaster } from "@/components/ui/sonner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -46,7 +47,8 @@ export default function RootLayout({
           </main>
         </div>
           {modal}
-          <div id="modal-root"></div>
+          <div id="modal-root" />
+          <Toaster />
         </body>
       </html>
     </ClerkProvider>
