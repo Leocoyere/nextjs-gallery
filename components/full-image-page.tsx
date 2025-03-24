@@ -10,7 +10,7 @@ export default async function FullPageImageView(props: {
 
     return (
         <div className="flex w-full h-full min-w-0">
-            <div className="flex-shrink flex justify-center items-center">
+            <div className="flex-shrink flex justify-center items-center w-full">
                 <img src={image.url} alt={image.name} className="flex-shrink object-contain" />
             </div>
 

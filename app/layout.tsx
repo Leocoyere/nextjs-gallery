@@ -37,7 +37,7 @@ export default function RootLayout({
           routerConfig={extractRouterConfig(ourFileRouter)}
         />
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+          className={`${geistSans.variable} ${geistMono.variable} antialiased dark`}
       >
         <div className="h-screen grid grid-rows-[auto_1fr]">
           <TopNav />
