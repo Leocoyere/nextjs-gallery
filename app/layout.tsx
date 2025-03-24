@@ -8,6 +8,7 @@ import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
 import { ourFileRouter } from "@/app/api/uploadthing/core";
 import { extractRouterConfig } from "uploadthing/server";
 import { Toaster } from "@/components/ui/sonner";
+import { PostHogProvider } from "@/app/_analytics/provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,9 +34,10 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-      <html lang="en">
-        <NextSSRPlugin
-          routerConfig={extractRouterConfig(ourFileRouter)}
+      <PostHogProvider>
+        <html lang="en">
+          <NextSSRPlugin
+            routerConfig={extractRouterConfig(ourFileRouter)}
         />
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased dark`}
@@ -49,8 +51,9 @@ export default function RootLayout({
           {modal}
           <div id="modal-root" />
           <Toaster />
-        </body>
-      </html>
+          </body>
+        </html>
+      </PostHogProvider>
     </ClerkProvider>
   );
 }
